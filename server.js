@@ -24,9 +24,9 @@ const server = http.createServer(app);
 console.log("🔄 Starting Whisspra Backend...");
 console.log("✅ NODE_ENV:", process.env.NODE_ENV);
 console.log("✅ PORT:", process.env.PORT || 5000);
-console.log("✅ MONGO_URI:", process.env.MONGO_URI ? ✔️ Present" : "❌ Missing");
 console.log("✅ JWT_SECRET:", process.env.JWT_SECRET ? "✔️ Present" : "❌ Missing");
 console.log("✅ API_KEY:", process.env.API_KEY ? "✔️ Present" : "❌ Missing");
+console.log("✅ MONGO_URI:", process.env.MONGO_URI ? "✔️ Present" : "❌ Missing");
 
 
 // 🛑 Ensure uploads folder exists
