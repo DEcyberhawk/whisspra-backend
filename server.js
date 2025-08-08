@@ -28,6 +28,7 @@ console.log("✅ MONGO_URI:", process.env.MONGO_URI ? ✔️ Present" : "❌ Mis
 console.log("✅ JWT_SECRET:", process.env.JWT_SECRET ? "✔️ Present" : "❌ Missing");
 console.log("✅ API_KEY:", process.env.API_KEY ? "✔️ Present" : "❌ Missing");
 
+
 // 🛑 Ensure uploads folder exists
 const uploadsDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadsDir)) {
