@@ -14,6 +14,11 @@ console.log("✅ JWT_SECRET:", process.env.JWT_SECRET ? "✔️ Present" : "❌ 
 console.log("✅ API_KEY:", process.env.API_KEY ? "✔️ Present" : "❌ Missing");
 console.log("✅ MONGO_URI:", process.env.MONGO_URI ? "✔️ Present" : "❌ Missing");
 
+// ✅ Root route to fix Render 404 issue
+app.get("/", (req, res) => {
+  res.send("✅ Whisspra Backend API is running!");
+});
+
 try {
   mongoose
     .connect(process.env.MONGO_URI)
@@ -25,7 +30,7 @@ try {
     })
     .catch((err) => {
       console.error("❌ MongoDB connection error:", err.message);
-      process.exit(1); // important to exit on DB failure
+      process.exit(1); // Exit process if DB connection fails
     });
 } catch (error) {
   console.error("❌ Fatal error:", error.message);
